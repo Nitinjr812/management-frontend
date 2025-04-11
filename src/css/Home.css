@@ -1,0 +1,482 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --success: #27ae60;
+}
+
+
+.Links {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--light) 0%, #dfe6e9 100%);
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: 0;
+}
+
+.hero {
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-title {
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0.5rem 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-icon {
+    margin-right: 12px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.hero-title {
+    font-size: clamp(1rem, 5vw, 3rem);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.hero-icon {
+    flex-shrink: 0;
+}
+
+.user-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+@media (max-width: 400px) {
+    .hero-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+}
+
+.user-name {
+    color: #41ff07;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.stat-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2.8rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: #ffff;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Class List */
+.class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.class-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.class-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.class-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+.class-time {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.class-room {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Announcements */
+.announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.announcement-item {
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.announcement-item.urgent {
+    background: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.urgent-badge {
+    margin-right: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-button {
+    color: white;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.button-icon {
+    font-size: 1.2rem;
+}
+
+.calendar-container {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.react-calendar {
+    width: 100%;
+    border: none;
+    background: transparent !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.react-calendar__tile--active {
+    background: var(--secondary) !important;
+    color: white;
+    border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+    background: rgba(52, 152, 219, 0.2) !important;
+    border-radius: 8px;
+}
+
+.react-calendar__navigation button {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+motion.div,
+motion.h3,
+motion.p,
+motion.button {
+    will-change: transform, opacity;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero,
+.classes-container,
+.announcements-container,
+.action-buttons,
+.calendar-container {
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.hero {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+}
+
+.classes-container {
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+.announcements-container {
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease infinite;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    box-shadow: 0 4px 30px rgba(67, 97, 238, 0.3);
+}
+
+.stat-card:nth-child(1) {
+    background: linear-gradient(135deg, var(--primary) 0%, #4895ef 100%);
+}
+
+.stat-card:nth-child(2) {
+    background: linear-gradient(135deg, var(--success) 0%, #4361ee 100%);
+}
+
+.stat-card:nth-child(3) {
+    background: linear-gradient(135deg, var(--accent) 0%, #f72585 100%);
+}
+
+.class-item {
+    background: rgba(248, 249, 250, 0.9);
+    border-left: 4px solid var(--primary);
+}
+
+.class-item:hover {
+    background: white;
+}
+
+.announcement-item {
+    background: rgba(248, 249, 250, 0.9);
+}
+
+.announcement-item.urgent {
+    background: rgba(248, 37, 133, 0.1);
+    border-left: 4px solid var(--accent);
+}
+
+.action-button:nth-child(1) {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.action-button:nth-child(2) {
+    background: linear-gradient(135deg, var(--success) 0%, var(--primary) 100%);
+}
+
+.calendar-container {
+    background: rgba(248, 249, 250, 0.9);
+}
+
+.react-calendar__tile--active {
+    background: var(--primary) !important;
+}
+
+.react-calendar__tile--now {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.hero-title,
+.hero-date {
+    color: white;
+}
+
+.section-title {
+    color: var(--secondary);
+}
+
+.class-name,
+.announcement-item {
+    color: var(--dark);
+}
+
+.class-time,
+.class-room {
+    color: var(--primary);
+}
+
+.announcement-item.urgent {
+    color: var(--accent);
+}
+
+.action-buttons {
+    background-size: 200% 200%;
+    animation: gradientShift 9s ease infinite;
+}
+
+.calendar-container {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.stat-card {
+    background-size: 200% 200%;
+    animation: gradientShift 7s ease infinite;
+}
+
+.classes-container h3,
+.announcements-container h3,
+.calendar-container h3 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.class-item,
+.announcement-item {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(5px);
+}
+
+.class-item:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

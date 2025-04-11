@@ -1,0 +1,373 @@
+.teacher-registration {
+    margin-top: 5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.registration-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%);
+    z-index: -1;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    left: -50px;
+}
+
+.registration-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-header h2 {
+    color: #2a2a2a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.input-group {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.input-group input {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #e9ecef;
+    background: transparent;
+    color: #2a2a2a;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.input-group label {
+    color: #6c757d;
+    font-size: 1rem;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0.5rem;
+    transition: 0.2s ease all;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: #6a11cb;
+}
+
+.input-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.input-bar:before,
+.input-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #6a11cb;
+    transition: 0.2s ease all;
+}
+
+.input-bar:before {
+    left: 50%;
+}
+
+.input-bar:after {
+    right: 50%;
+}
+
+.input-group input:focus~.input-bar:before,
+.input-group input:focus~.input-bar:after {
+    width: 50%;
+}
+
+.select-group {
+    margin-top: 1.5rem;
+}
+
+.select-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    appearance: none;
+    background: white;
+    font-size: 1rem;
+    color: #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #6c757d;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+/* Fee Display Styles */
+.fee-display {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(74, 107, 255, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+.fee-display h3 {
+    color: #4a6bff;
+    margin-bottom: 10px;
+}
+
+.fee-details-btn {
+    background: none;
+    border: none;
+    color: #4a6bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.fee-details-btn:hover {
+    color: #3a56cc;
+}
+
+.fee-details {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    animation: slideDown 0.3s ease;
+}
+
+.fee-details h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.fee-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fee-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fee-details li:last-child {
+    border-bottom: none;
+}
+
+.payment-info {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #718096;
+    font-style: italic;
+}
+ 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+@media (max-width: 768px) {
+    .fee-display {
+        padding: 10px;
+    }
+    
+    .fee-details {
+        padding: 10px;
+    }
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.submit-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.submit-btn svg {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.submit-btn:hover:before {
+    left: 0;
+}
+
+.submit-btn:hover svg {
+    transform: translateX(5px);
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.card-footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.card-footer a:hover {
+    color: #2575fc;
+    text-decoration: underline;
+}
+ 
+.installment-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-installment-btn {
+    background: transparent;
+    color: #4a89dc;
+    border: 1px dashed #4a89dc;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.add-installment-btn:hover {
+    background: rgba(74, 137, 220, 0.1);
+}
