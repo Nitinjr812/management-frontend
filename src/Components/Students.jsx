@@ -29,7 +29,7 @@ const Students = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8080/studentsdata", { value, courseFee, installment })
+        axios.post("https://management-backend-zeta.vercel.app/studentsdata", { value, courseFee, installment })
             .then((res) => {
                 if (res.data.status) {
                     alert(res.data.msg);

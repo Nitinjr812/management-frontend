@@ -12,7 +12,7 @@ const Edit = () => {
         setedit({ ...edit, [e.target.name]: e.target.value });
     };
     const editeddata = () => {
-        axios.post("http://localhost:8080/edit", { edit })
+        axios.post("https://management-backend-zeta.vercel.app/edit", { edit })
         
     }
 

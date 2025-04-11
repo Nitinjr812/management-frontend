@@ -16,7 +16,7 @@ const Teacher = () => {
     }
     // console.log(user)
     const submit = () => {
-        axios.post("http://localhost:8080/teacher", { user }).then((res) => {
+        axios.post("https://management-backend-zeta.vercel.app/teacher", { user }).then((res) => {
             if (res.data.status) {
                 // window.location.reload()
                 go("/Home")

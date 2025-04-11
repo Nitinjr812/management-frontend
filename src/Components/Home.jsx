@@ -74,13 +74,13 @@ const Home = () => {
     ];
 
     const [data, setdata] = useState([])
-    axios.get("http://localhost:8080/messi").then((res) => {
+    axios.get("https://management-backend-zeta.vercel.app/messi").then((res) => {
         if (res.data.status) {
             setdata(res.data.messi)
         }
     })
     const [teachlength, teachsetlength] = useState()
-    axios.get("http://localhost:8080/users").then((res) => {
+    axios.get("https://management-backend-zeta.vercel.app/users").then((res) => {
         if (res.data.status) {
             teachsetlength(res.data.len)
         }

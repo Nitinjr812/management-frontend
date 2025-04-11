@@ -22,7 +22,7 @@ export const Active = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const res = await axios.post("http://localhost:8080/delete", { item: user });
+                    const res = await axios.post("https://management-backend-zeta.vercel.app/delete", { item: user });
                     if (res.data.status) {
                         Swal.fire('Deleted!', res.data.msg, 'success');
                         setUsers(prevUsers => prevUsers.filter(u => u._id !== user._id));
@@ -38,7 +38,7 @@ export const Active = () => {
     };
 
     useEffect(() => {
-        axios.get("http://localhost:8080/messi")
+        axios.get("https://management-backend-zeta.vercel.app/messi")
             .then((res) => {
                 if (res.data.status) setUsers(res.data.messi);
                 else console.log(res.data.msg);
