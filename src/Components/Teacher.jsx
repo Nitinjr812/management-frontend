@@ -30,7 +30,6 @@ const Teacher = () => {
     // nitin
     // Oio3pg0yQy4UQR8W
 
-
     return (
         <>
             <Navbar />
